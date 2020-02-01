@@ -1,15 +1,2 @@
 .main {
   text-align: center; }
-
-.navbar ul {
-  display: inline-flex; }
-
-.navbar ul li {
-  list-style: none; }
-
-.navbar ul li a {
-  margin: 10px;
-  text-decoration: none; }
-
-.navbar ul li a:visited {
-  color: #ffffff; }

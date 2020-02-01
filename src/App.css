@@ -50,3 +50,17 @@
 .git-profile__show {
     visibility: visible;
 }
+
+.navbar > ul {
+    display: inline-flex;
+}
+
+.navbar > ul > li {
+    list-style-type: none;
+}
+
+.navbar > ul > li > a {
+    margin: 10px;
+    text-decoration: none;
+    color: #666666;
+}
