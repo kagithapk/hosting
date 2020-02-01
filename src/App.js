@@ -49,8 +49,8 @@ function App() {
           <p>This is my <a className='git-link' href='https://www.github.com/kagithapk' alt='https://www.github.com' onMouseOver={() => {profilepop()}} onMouseOut={() => {profileoff()}}>Github</a> profile!</p>
         </div>
         <Main />
-        <Route exact path="/" component={Home}></Route>
-        <Route path="/about" component={About}></Route>
+        <Route exact path="/hosting" component={Home}></Route>
+        <Route path="/hosting/about" component={About}></Route>
       </BrowserRouter>
     </div>
   );
