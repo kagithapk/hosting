@@ -5,12 +5,22 @@
 #toggle-button {
     float: right;
     margin-right: 10px;
-    position: relative;
-    bottom: 39px;
+    position: absolute;
+    top: 14px;
+    right: 5px;
     border: none;
     border-radius: 5px;
     padding: 7px;
     outline: none;
+}
+
+@media only screen and (max-width: 400px) {
+    #toggle-button {
+        top: 17px;
+        font-size: 0.6em;
+        margin-right: 4px;
+        padding: 4px;
+    }
 }
 
 .toggle-button__white {

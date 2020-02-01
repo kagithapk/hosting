@@ -1,5 +1,9 @@
 import React from 'react';
 import './App.css';
+import Main from './components/Main';
+import { BrowserRouter, Route, Link } from 'react-router-dom';
+import Home from './components/Home';
+import About from './components/About';
 
 function App() {
 
@@ -29,14 +33,25 @@ function App() {
   }
   return (
     <div className='header'>
-      <div>
-        <p>Welcome to my page!</p>
-        <button className='toggle-button__white' id='toggle-button' onClick={() => { toggle_change() }}>Change Theme</button>
-      </div>
-      <div className='git-div'>
-        <span id='git-profile' className='git-profile__hid'>Praveen Kagitha (kagithapk)</span>
-        <p>This is my <a className='git-link' href='https://www.github.com/kagithapk' alt='https://www.github.com' onMouseOver={() => {profilepop()}} onMouseOut={() => {profileoff()}}>Github</a> profile!</p>
-      </div>
+      <BrowserRouter>
+        <nav className="navbar">
+          <ul>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/about">About</Link></li>
+          </ul>
+        </nav>
+        <div>
+          <p>Welcome to my page!</p>
+          <button className='toggle-button__white' id='toggle-button' onClick={() => { toggle_change() }}>Change Theme</button>
+        </div>
+        <div className='git-div'>
+          <span id='git-profile' className='git-profile__hid'>Praveen Kagitha (kagithapk)</span>
+          <p>This is my <a className='git-link' href='https://www.github.com/kagithapk' alt='https://www.github.com' onMouseOver={() => {profilepop()}} onMouseOut={() => {profileoff()}}>Github</a> profile!</p>
+        </div>
+        <Main />
+        <Route exact path="/" component={Home}></Route>
+        <Route path="/about" component={About}></Route>
+      </BrowserRouter>
     </div>
   );
 }
